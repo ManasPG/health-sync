@@ -1,0 +1,12 @@
+{
+  "userId": "001",
+  "name": "John Doe",
+  "heartRate": 72,
+  "stepsToday": 6432,
+  "caloriesBurned": 430,
+  "sleep": {
+    "totalHours": 6.8,
+    "deepSleepHours": 2.3
+  },
+  "lastUpdated": "2025-06-15T12:30:00Z"
+}

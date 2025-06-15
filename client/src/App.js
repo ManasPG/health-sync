@@ -1,23 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import { useEffect } from 'react';
 
 function App() {
+  useEffect(() => {
+    fetch('http://localhost:5000')
+      .then((res) => res.text())
+      .then((data) => {
+        console.log('✅ Backend response:', data);
+      })
+      .catch((err) => {
+        console.error('❌ Backend error:', err);
+      });
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <h1>Welcome to HealthSync</h1>
+      <p>Check your browser console for backend response.</p>
     </div>
   );
 }
